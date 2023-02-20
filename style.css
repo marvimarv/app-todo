@@ -1,13 +1,40 @@
-.body {
-
+body {
     width: 100vw;
     height: 100vh;
-
 }
 
-.carouselExample {
-    display: flex;
+.appContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 30px;
     justify-content: center;
-    align-content: center;
-width: 50vw;
+}
+
+.header {
+    font-size: xx-large;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    place-self: center;
+}
+
+.itemList {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    margin-bottom: 10%;
+}
+
+.inputArea {
+    text-align: center;
+    margin-top: 10%;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    place-self: center;
 }
