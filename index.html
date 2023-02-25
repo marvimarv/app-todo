@@ -13,28 +13,25 @@
 </head>
 
 <body class="bg-primary-subtle">
-    <div class="appContainer">
-        <div class="header"><span>To-Do App</span></div>
-         <div class="itemList">
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group
-                    item</a> <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple
-                    dark list group item</a> <a href="#"
-                    class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group
-                    item</a>
-                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">A simple dark list group
-                    item</a>
-            </div>
-            <div class="inputArea">
-            <input type="text" class="form-control " placeholder="To-Do Item" aria-label="To-Do Item"
-                aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Speichern</button>
-        </div></div>
+    <div class="container flex-row flex-wrap align-self-center">
+        <div class="header">
+            <p class="text-center text-uppercase fs-1">Just a simple to-do app</p>
+            <p class="text-center fs-4">To delete an item of your list, simply click on it.</p>
+        </div>
+        <div class="toDoList">
+            <ul class="list-group" id="myToDo">
+                <!-- <li class="list-group-item list-group-item-dark list-group-item-action">Test</li>
+                <li class="list-group-item list-group-item-dark list-group-item-action">test2</li> -->
+            </ul>
+        </div>
+        <div class="inputArea input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter new Item" aria-label="add To-Do Item" id="newItem"
+                aria-describedby="addNewItem">
+            <button onclick="addItemFunction()" class="btn btn-outline-secondary" type="button" id="addItem">Add to
+                List</button>
+        </div>
     </div>
-    </div>
-    </div>
-
-
+    <script src="todo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
         </script>
