@@ -1,7 +1,12 @@
+body {
+   width: 100vw;
+   height: 100vh;
+}
 
-.appContainer {
-    width: 100vw;
-    height: 100vw;
+.card-group {
+    width: 50%;
+    height: 50%;
+    margin-top: 10%;
 }
 
 .header {
@@ -9,24 +14,3 @@
     width: 100%;
     margin-bottom: 5%;
 }
-
-.toDoList {
-    width: 100%;
-    margin-bottom: 5%;
-}
-
-.inputArea {
-    width: 100%;
-}
-
-ul {
-    list-style-type: none;
-}
-
-/* li {
-    width: 100%;
-    border-radius: 5px;
-    background-color: gray;
-    margin-bottom: 5px;
-}
-  */

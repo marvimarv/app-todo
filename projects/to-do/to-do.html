@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All my projects</title>
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-light">
@@ -19,10 +21,10 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link text-uppercase active" href="/index.html">All Projects</a>
+              <a class="nav-link text-uppercase" href="/index.html">All Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-uppercase" href="/projects/to-do/to-do.html">To-Do App</a>
+              <a class="nav-link text-uppercase active" href="/projects/to-do/to-do.html">To-Do App</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-uppercase" href="/projects/bmi/bmi.html">BMI Calculator</a>
@@ -31,38 +33,28 @@
           </div>
       </nav>
 
-<body class="bg-light">
-    <div class="container flex-row flex-wrap align-self-center"></div>
-    <div class="header">
-        <p class="text-center text-uppercase fs-1 mt-5">All my projects</p>
-        <p class="text-center fs-4">On this page you can view all my projects.</p>
+    <div class="container flex-row flex-wrap align-self-center">
+        <div class="header">
+            <p class="text-center text-uppercase fs-1">Just a simple to-do app</p>
+            <p class="text-center fs-4">To delete an item of your list, simply click on it.</p>
+        </div>
+        <div class="toDoList">
+            <ul class="list-group" id="myToDo">
+                <!-- <li class="list-group-item list-group-item-dark list-group-item-action">Test</li>
+                <li class="list-group-item list-group-item-dark list-group-item-action">test2</li> -->
+            </ul>
+        </div>
+        <div class="inputArea input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter new Item" aria-label="add To-Do Item" id="newItem"
+                aria-describedby="addNewItem">
+            <button onclick="addItemFunction()" class="btn btn-outline-secondary" type="button" id="addItem">Add to
+                List</button>
+        </div>
     </div>
-    <div class="projects card-group mx-auto">
-        <div class="card" style="width: 18rem;">
-            <img src="/img/to-do.svg" class="card-img-top" alt="to-do app icon">
-            <div class="card-body">
-              <h5 class="card-title">To-Do App</h5>
-              <p class="card-text">Check out my simple application for your to-do's.</p>
-              <a href="/projects/to-do/to-do.html" class="btn btn-primary">Check it out</a>
-            </div>
-          </div>
-          <div class="card" style="width: 18rem;">
-            <img src="/img/bmi-calc.svg" class="card-img-top" alt="to-do app icon">
-            <div class="card-body">
-              <h5 class="card-title">BMI Calculator</h5>
-              <p class="card-text">Want to calculate your BMI? Do it here.</p>
-              <a href="#" class="btn btn-primary">Check it out</a>
-            </div>
-          </div>
-    </div>
-
-
-
-    
-
-    <script src=""></script>
+    <script src="todo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
         </script>
 </body>
+
 </html>
