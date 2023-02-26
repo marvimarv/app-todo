@@ -12,7 +12,7 @@
 
 <body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="/index.html" href2="/project_page/index.html">
+        <a class="navbar-brand" href="/index.html" onclick="checkLink(event, '/project_page/index.html')">
             <img src="/img/brand.png" width="30" height="auto" alt="marvoproduction logo" class="d-inline-block">
             &nbsp;&nbsp;MARVO MAKES STUFF
           </a>
@@ -59,7 +59,29 @@
 
 
     
-
+    <script>
+      function checkLink(event, fallbackUrl) {
+        event.preventDefault(); // prevent the default link behavior
+        
+        var url = event.currentTarget.href; // get the link URL
+        var xhr = new XMLHttpRequest(); // create an XMLHttpRequest object
+        
+        xhr.open('HEAD', url); // set the request method and URL
+        xhr.onload = function() {
+          if (xhr.status === 404) {
+            window.location.href = fallbackUrl; // redirect to the fallback URL
+          } else {
+            window.location.href = url; // load the original URL
+          }
+        };
+        
+        xhr.onerror = function() {
+          window.location.href = fallbackUrl; // redirect to the fallback URL if the request fails
+        };
+        
+        xhr.send(); // send the request
+      }
+      </script>
     <script src="package.json"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
