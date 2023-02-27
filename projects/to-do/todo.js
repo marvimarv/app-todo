@@ -21,6 +21,8 @@ function addItemFunction(){
     });
 }
 
+
+
 const newItem = document.getElementById("newItem");
 newItem.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
