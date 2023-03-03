@@ -6,6 +6,11 @@ body {
 
 } */
 
+p {
+    text-align: center;
+    font-size: larger;
+}
+
 .searchContainer {
     display: flex;
     justify-content: center;
