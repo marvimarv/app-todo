@@ -1,16 +1,23 @@
-
+/* 
 body {
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;
 
+} */
 
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.searchbar {
+    
+    margin-top: 10%;
 }
 
-
-
 .bodyContainer {
-    margin-top: 10%;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
