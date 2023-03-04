@@ -1,3 +1,16 @@
+
+//create global variables
+let counter = Number();
+let counterText = "";
+let amountOfCats = Number();
+let maximumCats = Number();
+
+// function for counter
+
+// function counterText(counter) {
+//   let counterText = `${counter} / ${maximumCats} pairs found`;
+// }
+
 document.getElementById("easy").addEventListener("click", function() {
     const chooseDifficulty = document.getElementById("chooseDifficulty");
     chooseDifficulty.innerHTML = '';
@@ -53,6 +66,19 @@ Promise.all(
     // Create two copies of the URLs and attach them
     catArray.push(...urls, ...urls);
 
+    //create counter
+    
+    maximumCats = Number(amountOfCats / 2);
+    let counterText = `${counter} / ${maximumCats} pairs found`;
+    const memoryContainerForText = document.getElementById("header");
+    const addText = document.createElement("p");
+    addText.setAttribute("id", "addText");
+    addText.innerText = counterText;
+    console.log(addText);
+    const manualText = document.getElementById("manualText");
+    memoryContainerForText.insertBefore(addText, manualText.nextSibling);
+
+
     // Shuffle the array
     for (let i = catArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -101,6 +127,11 @@ memoryContainer.addEventListener("click", (event) => {
         secondCard.classList.add("matched");
         const manualText = document.getElementById("manualText");
         manualText.innerHTML = 'That was a match! Nice!';
+        const addText = document.getElementById("addText");
+        counter += 1;
+        counterText= `${counter} / ${maximumCats} pairs found`;
+        addText.innerText= counterText;
+        console.log(addText.innerText);
       } else {
         // Not a match
         setTimeout(() => {
