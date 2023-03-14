@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "express": "^4.18.2",
+    "luxon": "^3.3.0",
+    "nodemon": "^2.0.21"
+  },
+  "name": "npm",
+  "version": "1.0.0",
+  "main": "javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babelCompile": "babel src -d compiled"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}
